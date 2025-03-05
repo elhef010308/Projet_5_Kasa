@@ -13,18 +13,8 @@ body {
 main {
     flex:1;
     margin: 50px;
-    height: 1095px;
     width: 100%;
-}
-
-header {
-    margin : 50px;
-}
-
-footer {
-    background-color: black;
-    width:100%;
-    margin: 50px 0 0 0;
+    height: auto;
 }
 
 h1, h2, h3, p {
