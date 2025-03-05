@@ -1,0 +1,39 @@
+@import "mixins";
+
+.header {
+    width: 1240px;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+
+    img {
+        width: 210.32px;
+        height: 68px;
+    }
+
+    nav {
+        height: 34px;
+        display: flex;
+        align-items:center;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 57px;
+
+            li {
+                a {
+                    @include typography-base;
+                    color: black;
+                }
+
+                a:focus {
+                    border-bottom: 2px solid black;
+                }
+                
+            }            
+        }
+    }
+}
