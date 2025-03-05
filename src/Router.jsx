@@ -11,11 +11,9 @@ function Router() {
       <Route path="/" element={<Layout><Home /></Layout>} />
       <Route path="/about" element={<Layout><About /></Layout>} />
       <Route path="/logement/:id" element={<Layout><Logement /></Layout>} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>
   );
 }
 
 export default Router;
-
-
