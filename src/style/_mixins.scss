@@ -5,6 +5,12 @@
   text-decoration: none;
 }
 
+@mixin display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin composant-title {
   position: relative;
   background-size: cover;           /* pour que l'image couvre toute la div */
@@ -12,7 +18,7 @@
   background-repeat: no-repeat;
   width: 1240px;
   height: 223px;
-  margin: 0 0 40px 0;
+  margin: 0 50px 40px 50px;
   border-radius: 25px;
   border: 1px solid black;
   display: flex;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Carts from "../components/Carts";
+import { Carts } from "../components/Components";
 
 function Home() {
     const [locations, setLocations] = useState([]);

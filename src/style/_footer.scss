@@ -7,11 +7,9 @@ footer {
 }
 
 .footer {
+    @include display-flex;
     height: 209px;
-    display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 28px;
 
     img {

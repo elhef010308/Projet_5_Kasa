@@ -4,23 +4,21 @@
 
 // COMPOSANT CARTS
 .cart-component {
+    @include display-flex;
     width: 1240px;
     height: auto;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap: 50.5px;
     padding: 50.5px 0;
     background-color: #f6f6f6;
-    border: none;
     border-radius: 10px;
+    margin: 0 50px;
 
     .cart-location {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end; 
+        justify-content: flex-end;
         width: 340px;
         height: 340px;
         margin: 0;
@@ -71,9 +69,90 @@
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
-    border: 1px solid black;
+    border: 1px solid;
     top: 0;
     left: 0;
     width: 1240px;
     height: 223px;
+}
+
+
+// COMPOSANT ABOUT
+.about-title {
+    background-image: url(../images/background-image2.png);
+    @include composant-title;
+}
+
+.about-title::before {
+    content: "";
+    position: absolute;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    width: 1240px;
+    height: 223px;
+}
+
+.collapse-container {
+    @include display-flex;
+    gap: 30px;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .collapse {
+        @include display-flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            background-color: #FF6060;
+            border-radius: 5px;
+            width: 1023px;
+            height: 54px;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 15px;
+            transition: all 0.3s ease-in-out;  // transition
+
+            .collapse-title, .collapse-arrow {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                color: white;
+            }
+
+            .collapse-title {
+                width: 956px;
+            }
+
+            .collapse-arrow {
+                width: 32px;
+            }
+        }
+
+        /* Contenu caché par défaut */
+        .collapse-content {
+            max-height: 0;
+            opacity: 0;
+            background-color: white;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.4s ease-out;
+            padding: 0 15px;
+        }
+
+        /* Quand le collapse est ouvert, le contenu prend de la place */
+        .collapse-content.show {
+            max-height: auto;
+            opacity: 1;
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 143%;
+        }
+    }
 }
