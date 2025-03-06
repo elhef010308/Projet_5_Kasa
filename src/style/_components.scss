@@ -1,29 +1,79 @@
 @import "header";
 @import "footer";
+@import "mixins";
 
 // COMPOSANT CARTS
 .cart-component {
     width: 1240px;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50.5px;
+    padding: 50.5px 0;
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 10px;
+
     .cart-location {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; 
         width: 340px;
         height: 340px;
-        border: 2px solid black;
-        border-radius:10px;
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 
         p {
-            top: 268px;
             width: 300px;
-            height: 52px;
+            height: auto;
             margin: 20px;
-            text-align: center;
+            text-align: start;
             font-size: 18px;
+            font-weight: 700;
+            color: white;
+            line-height: 143%;
+            z-index: 2;
         }
     }
 
-    
+    .cart-location::before {
+        content: "";
+        position: absolute;
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        width: 340px;
+        height: 340px;
+    }
+}
+
+
+// COMPOSANT HOME (title)
+.home-title {
+    background-image: url(../images/background-image.png);
+    @include composant-title;
+
+    h1 {
+        z-index: 2;
+    }
+}
+
+.home-title::before {
+    content: "";
+    position: absolute;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    border: 1px solid black;
+    top: 0;
+    left: 0;
+    width: 1240px;
+    height: 223px;
 }

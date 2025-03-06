@@ -1,7 +1,22 @@
 @mixin typography-base {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    text-decoration: none;
-  }
-  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@mixin composant-title {
+  position: relative;
+  background-size: cover;           /* pour que l'image couvre toute la div */
+  background-position: center;      /* centrer l'image */
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 223px;
+  margin: 0 0 40px 0;
+  border-radius: 25px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}

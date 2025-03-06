@@ -19,11 +19,17 @@ function Home() {
     }, []);
 
     return (
-        <div className='cart-component'>
-            {locations.map((logement) => (
-                <Carts key={logement.id} title={logement.title} />
-            ))}
-        </div>
+        <>
+            <div className="home-title">
+                <h1>Chez vous partout et ailleurs</h1>
+            </div>
+            <div className='cart-component'>
+                {locations.map((logement) => (
+                    <Carts key={logement.id} title={logement.title} cover={logement.cover} />
+                ))}
+            </div>
+        </>
+
     );
 }
 
