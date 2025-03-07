@@ -5,6 +5,20 @@
   text-decoration: none;
 }
 
+@mixin text-error {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+@mixin error-message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+}
+
 @mixin display-flex {
     display: flex;
     align-items: center;

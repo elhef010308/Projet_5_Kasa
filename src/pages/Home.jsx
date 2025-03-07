@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Carts } from "../components/Components";
 
 function Home() {
+    {/* LOCATIONS = getter (l'état actuel) ; SETLOCATIONS = setter */}
     const [locations, setLocations] = useState([]);
 
     useEffect(() => {

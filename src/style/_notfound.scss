@@ -1,0 +1,23 @@
+@import "mixins";
+
+.error-page {
+    @include display-flex;
+    flex-direction: column;
+
+    img {
+        width: 597px;
+        height: 263px;
+        margin: 60px 0;
+    }
+
+    .error-message {
+        @include error-message;
+        margin: 60px 0;
+    }
+    
+    .error-redirection {
+        @include text-error;
+        cursor: pointer;
+        margin: 60px 0;
+    }
+}

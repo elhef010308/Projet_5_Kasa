@@ -11,7 +11,6 @@ export function Carts({ title, cover }) {
 }
 
 
-
 // COMPOSANT COLLAPSE
 export function Collapse({ title, content }) {
     const [open, setOpen] = useState(false);
