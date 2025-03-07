@@ -1,10 +1,19 @@
 import { useState } from "react";
 
 // COMPOSANT CARTE
-export function Carts({ title, cover }) {
+export function Carts({ title, cover, onClick }) {
     return (
-        <div className="cart-location"
-            style={{ backgroundImage: `url(${cover})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", position: "relative" }}>
+        <div 
+            className="cart-location"
+            onClick={onClick}
+            style={{
+                backgroundImage: `url(${cover})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                position: "relative"
+            }}
+        >
             <p>{title}</p>
         </div>
     );
