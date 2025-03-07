@@ -1,9 +1,10 @@
 // importation de tous les fichiers style.scss
 
-@import "components";
-@import "global";
-@import "mixins";
-@import "header";
-@import "footer";
-@import "notfound";
-@import "responsive";
+@use "components";
+@use "global";
+@use "mixins";
+@use "header";
+@use "footer";
+@use "logements";
+@use "notfound";
+@use "responsive";

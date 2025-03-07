@@ -1,0 +1,171 @@
+@use "mixins";
+
+.location-page {
+    @include mixins.display-flex;
+    width: 100%;
+    height: 643px;
+    flex-direction: column;
+
+    .location-image {
+        @include mixins.image-logement;
+        border-radius: 25px;
+        position: relative;
+
+        div {
+            padding: 0 20px;
+            position: absolute; // positionnement absolu pour les flèches
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%); // Centre verticalement les flèches
+            display: flex;
+            justify-content: space-between; // flèches à gauche et à droite
+
+            .vector-left, .vector-right {
+                width: 46.68px;
+                height: 79.20px;
+                color: white;
+            }
+        }
+
+        p {
+            position: absolute; // positionnement absolu pour le compteur (1/x)
+            bottom: 10px; // placer le compteur en bas à 10px
+            left: 50%;
+            transform: translateX(-50%); // centrer précisément
+            color: white;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+    }
+
+    .location-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1240px;
+        margin-top: 25px;
+
+        .title {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .author {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 64px;
+            gap: 20px;
+
+            p {
+                font-size: 18px;
+                color: #FF6060;
+                width: 93px;
+                text-align: right;
+                margin-top: 5px;
+            }
+
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .location-filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1240px;
+        height: 36px;
+        margin-top: 25px;
+
+        .button-filter {
+            @include mixins.display-flex;
+            flex-direction: row;
+            width: auto;
+            gap: 15px;
+
+            button {
+                border:none;
+                border-radius: 10px;
+                background-color: #FF6060;
+                width: 115px;
+                height: 25px;
+                font-size: 14px;
+                font-weight: 700;
+                color: white;
+            }
+        }
+
+        .stars {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 196px;
+
+            p {
+                font-size: 36px;
+                color:#FF6060
+            }
+        }
+    }
+
+    .location-collapse {
+        @include mixins.display-flex;
+        flex-direction: row;
+        margin-top: 25px;
+        width: 100%;
+        gap: 80px;
+
+        .collapse {
+            @include mixins.collapse;
+            width: 582px;
+    
+            div {
+                @include mixins.collapse-div;
+                height: 52px;
+    
+                .collapse-title, .collapse-arrow {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: white;
+                }
+    
+                .collapse-title {
+                    width: 520px;
+                }
+    
+                .collapse-arrow {
+                    width: 32px;
+                }
+            }
+    
+            /* Contenu caché par défaut */
+            .collapse-content {
+                @include mixins.collapse-content;
+            }
+    
+            /* Quand le collapse est ouvert, le contenu prend de la place */
+            .collapse-content.show {
+                @include mixins.collapse-content-show;
+            }
+        }
+    }
+}

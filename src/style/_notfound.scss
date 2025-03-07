@@ -1,7 +1,7 @@
-@import "mixins";
+@use "mixins";
 
 .error-page {
-    @include display-flex;
+    @include mixins.display-flex;
     flex-direction: column;
 
     img {
@@ -11,12 +11,12 @@
     }
 
     .error-message {
-        @include error-message;
+        @include mixins.error-message;
         margin: 60px 0;
     }
     
     .error-redirection {
-        @include text-error;
+        @include mixins.text-error;
         cursor: pointer;
         margin: 60px 0;
     }

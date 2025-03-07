@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 footer {
     background-color: black;
@@ -7,7 +7,7 @@ footer {
 }
 
 .footer {
-    @include display-flex;
+    @include mixins.display-flex;
     height: 209px;
     flex-direction: column;
     gap: 28px;
@@ -19,7 +19,7 @@ footer {
     }
 
     p {
-        @include typography-base;
+        @include mixins.typography-base;
         color: white;
     }
 }

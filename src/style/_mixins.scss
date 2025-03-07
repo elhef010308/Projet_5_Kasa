@@ -20,15 +20,15 @@
 }
 
 @mixin display-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin composant-title {
   position: relative;
-  background-size: cover;           /* pour que l'image couvre toute la div */
-  background-position: center;      /* centrer l'image */
+  background-size: cover;        /* pour que l'image couvre toute la div */
+  background-position: center;   /* centrer l'image */
   background-repeat: no-repeat;
   width: 1240px;
   height: 223px;
@@ -39,4 +39,63 @@
   align-items: center;
   justify-content: center;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin image-logement {
+  position: relative;
+  background-size: cover;       /* pour que l'image couvre toute la div */
+  background-position: center;  /* centrer l'image */
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 415px;
+  margin: 0;
+  border-radius: 0;
+}
+
+
+@mixin collapse-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin collapse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin collapse-div {
+  display: flex;
+  background-color: #FF6060;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;  // transition
+}
+
+@mixin collapse-content {
+  max-height: 0;
+  opacity: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.4s ease-out;
+  padding: 0 15px;
+}
+
+@mixin collapse-content-show {
+  max-height: auto;
+  opacity: 1;
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 143%;
 }

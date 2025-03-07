@@ -1,8 +1,8 @@
-@import "mixins";
+@use "mixins";
 
 // COMPOSANT CARTS
 .cart-component {
-    @include display-flex;
+    @include mixins.display-flex;
     width: 1240px;
     height: auto;
     flex-direction: row;
@@ -55,7 +55,7 @@
 // COMPOSANT HOME (title)
 .home-title {
     background-image: url(../images/background-image.png);
-    @include composant-title;
+    @include mixins.composant-title;
 
     h1 {
         z-index: 2;
@@ -79,7 +79,7 @@
 // COMPOSANT ABOUT
 .about-title {
     background-image: url(../images/background-image2.png);
-    @include composant-title;
+    @include mixins.composant-title;
 }
 
 .about-title::before {
@@ -95,29 +95,17 @@
 }
 
 .collapse-container {
-    @include display-flex;
-    gap: 30px;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include mixins.collapse-container;
 
     .collapse {
-        @include display-flex;
-        flex-direction: column;
+        @include mixins.collapse;
 
         div {
-            display: flex;
-            background-color: #FF6060;
-            border-radius: 5px;
+            @include mixins.collapse-div;
             width: 1023px;
             height: 54px;
-            flex-direction: row;
-            align-items: center;
-            padding: 0 15px;
-            transition: all 0.3s ease-in-out;  // transition
 
             .collapse-title, .collapse-arrow {
-                font-family: 'Montserrat', sans-serif;
                 font-size: 24px;
                 font-weight: 700;
                 color: white;
@@ -134,24 +122,12 @@
 
         /* Contenu caché par défaut */
         .collapse-content {
-            max-height: 0;
-            opacity: 0;
-            background-color: white;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.4s ease-out;
-            padding: 0 15px;
+            @include mixins.collapse-content;
         }
 
         /* Quand le collapse est ouvert, le contenu prend de la place */
         .collapse-content.show {
-            max-height: auto;
-            opacity: 1;
-            background-color: white;
-            padding: 15px;
-            margin: 10px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 143%;
+            @include mixins.collapse-content-show;
         }
     }
 }

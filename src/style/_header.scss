@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 header {
     margin : 50px;
@@ -29,7 +29,7 @@ header {
 
             li {
                 a {
-                    @include typography-base;
+                    @include mixins.typography-base;
                     color: black;
                 }
 
