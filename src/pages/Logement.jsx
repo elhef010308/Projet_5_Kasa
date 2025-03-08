@@ -37,10 +37,10 @@ function Logement() {
 
     return (
         <div className="location-page">
-            <div className="location-image" style={{ backgroundImage: `url(${location.pictures[currentPicture]})` }}>            
+            <div className="location-image" key={currentPicture} style={{ backgroundImage: `url(${location.pictures[currentPicture]})` }}>            
                 <div>
-                    <img alt="vector-left" src={vectorLeft} onClick={nextImage} />
-                    <img alt="vector-right" src={vectorRight} onClick={previousImage} />
+                    <img alt="vector-left" src={vectorLeft} onClick={previousImage} />
+                    <img alt="vector-right" src={vectorRight} onClick={nextImage} />
                 </div>
                 <p>{currentPicture + 1}/{location.pictures.length}</p>
             </div>
@@ -70,16 +70,16 @@ function Logement() {
             </div>                                           {/* Si la note de {location.rating} est SUP on affiche une étoile pleine, sinon une étoile vide */}
 
             <div className="location-collapse">
-                <Collapse title="Description" /*content={location.description}*/ />
+                <Collapse title="Description" content={location.description} />
                 <Collapse
                     title="Équipements"
-                    /*content={(
+                    content={(
                         <ul>
                             {location.equipments.map((equip, index) => (
                                 <li key={index}>{equip}</li>
                             ))}
                         </ul>
-                    )}*/
+                    )}
                 />
             </div>
         </div>

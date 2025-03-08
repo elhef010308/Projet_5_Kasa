@@ -128,6 +128,7 @@
         /* Quand le collapse est ouvert, le contenu prend de la place */
         .collapse-content.show {
             @include mixins.collapse-content-show;
+            padding: 15px;
         }
     }
 }

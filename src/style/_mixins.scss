@@ -83,17 +83,16 @@
 @mixin collapse-content {
   max-height: 0;
   opacity: 0;
-  background-color: white;
+  background-color: transparent;
   overflow: hidden;
   transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.4s ease-out;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 @mixin collapse-content-show {
   max-height: auto;
   opacity: 1;
-  background-color: white;
-  padding: 15px;
+  background-color: transparent;
   margin: 10px;
   font-size: 18px;
   font-weight: 400;

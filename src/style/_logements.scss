@@ -3,13 +3,26 @@
 .location-page {
     @include mixins.display-flex;
     width: 100%;
-    height: 643px;
+    min-height: 643px;
+    height: auto;
     flex-direction: column;
 
     .location-image {
         @include mixins.image-logement;
         border-radius: 25px;
         position: relative;
+        animation: fadeIn 0.8s ease-in-out;
+
+        @keyframes fadeIn {
+            from {
+              opacity: 0.4;
+              transform: translateX(10px); // effet très léger de slide
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
 
         div {
             padding: 0 20px;
@@ -103,9 +116,11 @@
 
             button {
                 border:none;
+                padding: 0 10px;
                 border-radius: 10px;
                 background-color: #FF6060;
-                width: 115px;
+                min-width: 115px;
+                width:auto;
                 height: 25px;
                 font-size: 14px;
                 font-weight: 700;
@@ -128,7 +143,9 @@
     }
 
     .location-collapse {
-        @include mixins.display-flex;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
         flex-direction: row;
         margin-top: 25px;
         width: 100%;
@@ -165,6 +182,7 @@
             /* Quand le collapse est ouvert, le contenu prend de la place */
             .collapse-content.show {
                 @include mixins.collapse-content-show;
+                padding: 80px 10px;
             }
         }
     }
