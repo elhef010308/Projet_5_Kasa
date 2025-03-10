@@ -14,10 +14,79 @@
         @include mixins.error-message;
         margin: 60px 0;
     }
-    
+
     .error-redirection {
         @include mixins.text-error;
         cursor: pointer;
         margin: 60px 0;
     }
 }
+
+
+// Petits mobiles (jusqu'à 480px)
+@media (max-width: 480px) {
+    .error-page {
+        img {
+            width: 198px;
+            height: 99px;
+            margin: 30px 0;
+        }
+
+        .error-message {
+            font-size: 18px;
+            white-space: normal;
+            text-align: center;
+            width: 260px;
+            margin: 30px 0;
+        }
+
+        .error-redirection {
+            font-size: 14px;
+            margin: 30px 0;
+        }
+    }
+}
+
+// Mobiles larges à tablettes petites (481px - 768px)
+@media (min-width: 481px) and (max-width: 768px) {
+    .error-page {
+        img {
+            width: 350px;
+            height: auto;
+            margin: 40px 0;
+        }
+
+        .error-message {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .error-link {
+            font-size: 16px;
+            margin-top: 25px;
+        }
+    }
+}
+
+// Tablettes standard à petits laptops (769px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+    .error-page {
+        img {
+            width: 400px;
+            height: auto;
+            margin: 40px 0;
+        }
+
+        .error-message {
+            font-size: 20px;
+        }
+
+        .error-link {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+    }
+}
+
+
+// Au-delà de 1024px : desktops standards

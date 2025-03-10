@@ -1,7 +1,7 @@
 @use "mixins";
 
 header {
-    margin : 50px;
+    margin: 50px;
 }
 
 .header {
@@ -9,7 +9,7 @@ header {
     height: 68px;
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
 
     img {
@@ -20,7 +20,7 @@ header {
     nav {
         height: 34px;
         display: flex;
-        align-items:center;
+        align-items: center;
 
         ul {
             display: flex;
@@ -36,8 +36,106 @@ header {
                 a:focus {
                     border-bottom: 2px solid black;
                 }
-                
-            }            
+
+            }
         }
     }
 }
+
+
+// Petits mobiles (jusqu'à 480px)
+@media (max-width: 480px) {
+    header {
+        margin: 10px;
+    }
+
+    .header {
+        width: 335px;
+
+        img {
+            width: 145px;
+            height: 46.88px;
+        }
+
+        nav {
+            height: 14px;
+            width: 190px;
+            justify-content: flex-end;
+
+            ul {
+                gap: 10px;
+
+                li {
+                    a {
+                        font-size: 12px;
+                        text-transform: uppercase; // passer en lettres majuscules
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobiles larges à tablettes petites (481px - 768px)
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        margin: 20px;
+    }
+
+    .header {
+        width: 90%;
+        height: 55px;
+
+        img {
+            width: 170px;
+            height: auto;
+        }
+
+        nav {
+            height: 24px;
+
+            ul {
+                gap: 20px;
+
+                li a {
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+// Tablettes standard à petits laptops (769px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        margin: 30px;
+    }
+
+    .header {
+        width: 90%;
+        height: 60px;
+
+        img {
+            width: 190px;
+            height: auto;
+        }
+
+        nav {
+            height: 28px;
+
+            ul {
+                gap: 35px;
+
+                li a {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+// Au-delà de 1024px : desktops standards

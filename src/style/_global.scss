@@ -49,3 +49,22 @@ h2 {
 ul, li, ol {
     list-style: none;
 }
+
+
+// Petits mobiles (jusqu'à 480px)
+@media (max-width: 480px) {
+    
+}
+
+// Mobiles larges à tablettes petites (481px - 768px)
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+// Tablettes standard à petits laptops (769px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+// Au-delà de 1024px : desktops standards

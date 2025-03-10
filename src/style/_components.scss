@@ -105,7 +105,8 @@
             width: 1023px;
             height: 54px;
 
-            .collapse-title, .collapse-arrow {
+            .collapse-title,
+            .collapse-arrow {
                 font-size: 24px;
                 font-weight: 700;
                 color: white;
@@ -132,3 +133,165 @@
         }
     }
 }
+
+
+// Petits mobiles (jusqu'à 480px)
+@media (max-width: 480px) {
+    // COMPOSANT CARTS
+    .cart-component {
+        width: 335px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px;
+        background-color: transparent;
+        margin: 0 10px;
+
+        .cart-location {
+            width: 335px;
+            height: 325px;
+
+            p {
+                margin: 15px;
+            }
+        }
+
+        .cart-location::before {
+            width: 335px;
+            height: 325px;
+        }
+    }
+
+    // COMPOSANTS HOME et ABOUT (title)
+    .home-title,
+    .about-title {
+        width: 335px;
+        height: 111px;
+        margin: 0 10px 20px 10px;
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+
+    .home-title::before,
+    .about-title::before {
+        width: 335px;
+        height: 111px;
+    }
+
+    // COMPOSANT ABOUT
+    .collapse-container .collapse div {
+        width: 335px;
+        height: 30px;
+
+        .collapse-title {
+            font-size: 13px;
+        }
+
+        .collapse-title {
+            width: 293px;
+        }
+
+        .collapse-arrow {
+            width: 32px;
+        }
+    }
+
+    .collapse-content.show {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+
+
+// Mobiles larges à tablettes petites (481px - 768px)
+@media (min-width: 481px) and (max-width: 768px) {
+    // COMPOSANT CARTS
+    .cart-component {
+        width: 90%;
+        gap: 20px;
+        padding: 20px 0;
+        margin: 0 auto;
+
+        .cart-location {
+            width: 100%;
+            height: 280px;
+        }
+    }
+
+    // COMPOSANTS HOME et ABOUT (title)
+    .home-title,
+    .about-title {
+        width: 90%;
+        height: 150px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 26px;
+        }
+    }
+
+    .home-title::before,
+    .about-title::before {
+        width: 100%;
+        height: 150px;
+    }
+
+    // COMPOSANT ABOUT
+    .collapse-container .collapse div {
+        width: 90%;
+        height: 40px;
+    }
+
+    .collapse-content.show {
+        font-size: 14px;
+    }
+}
+
+// Tablettes standard à petits laptops (769px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+    // COMPOSANT CARTS
+    .cart-component {
+        width: 80%;
+        gap: 30px;
+        padding: 30px 0;
+        margin: 0 auto;
+
+        .cart-location {
+            width: 45%;
+            height: 300px;
+        }
+    }
+
+    // COMPOSANTS HOME et ABOUT (title)
+    .home-title,
+    .about-title {
+        width: 80%;
+        height: 180px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .home-title::before,
+    .about-title::before {
+        width: 100%;
+        height: 180px;
+    }
+
+    // COMPOSANT ABOUT
+    .collapse-container .collapse div {
+        width: 80%;
+        height: 50px;
+    }
+
+    .collapse-content.show {
+        font-size: 16px;
+    }
+}
+
+
+// Au-delà de 1024px : desktops standards
