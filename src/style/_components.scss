@@ -144,7 +144,7 @@
         gap: 15px;
         padding: 0px;
         background-color: transparent;
-        margin: 0 10px;
+        margin: 0 auto;
 
         .cart-location {
             width: 335px;
@@ -166,7 +166,7 @@
     .about-title {
         width: 335px;
         height: 111px;
-        margin: 0 10px 20px 10px;
+        margin: 0 auto 20px auto;
 
         h1 {
             font-size: 24px;
@@ -202,8 +202,6 @@
         font-size: 12px;
     }
 }
-
-
 
 // Mobiles larges à tablettes petites (481px - 768px)
 @media (min-width: 481px) and (max-width: 768px) {

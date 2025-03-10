@@ -2,6 +2,7 @@
 
 header {
     margin: 50px;
+    text-align: center;
 }
 
 .header {
@@ -46,11 +47,12 @@ header {
 // Petits mobiles (jusqu'à 480px)
 @media (max-width: 480px) {
     header {
-        margin: 10px;
+        margin: auto;
     }
 
     .header {
         width: 335px;
+        margin: 10px auto;
 
         img {
             width: 145px;
@@ -79,12 +81,13 @@ header {
 // Mobiles larges à tablettes petites (481px - 768px)
 @media (min-width: 481px) and (max-width: 768px) {
     header {
-        margin: 20px;
+        margin: auto;
     }
 
     .header {
-        width: 90%;
+        width: 700px;
         height: 55px;
+        margin: 20px auto;
 
         img {
             width: 170px;
@@ -110,12 +113,13 @@ header {
 // Tablettes standard à petits laptops (769px - 1024px)
 @media (min-width: 769px) and (max-width: 1024px) {
     header {
-        margin: 30px;
+        margin: auto;
     }
 
     .header {
-        width: 90%;
+        width: 900px;
         height: 60px;
+        margin: 30px auto;
 
         img {
             width: 190px;

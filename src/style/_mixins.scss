@@ -30,9 +30,10 @@
   background-size: cover;        /* pour que l'image couvre toute la div */
   background-position: center;   /* centrer l'image */
   background-repeat: no-repeat;
-  width: 1240px;
+  width: 100%;         // Prend toute la largeur disponible sans dépasser
+  max-width: 1240px;   // Empêche un trop grand écart sur les grands écrans
   height: 223px;
-  margin: 0 50px 40px 50px;
+  margin: 0 auto 40px auto; // Centre horizontalement
   border-radius: 25px;
   border: 1px solid black;
   display: flex;
@@ -94,7 +95,6 @@
   opacity: 1;
   background-color: transparent;
   margin: 10px;
-  font-size: 18px;
   font-weight: 400;
   line-height: 143%;
 }
