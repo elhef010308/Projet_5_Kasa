@@ -11,7 +11,12 @@ function Router() {
       <Route path="/" element={<Layout><Home /></Layout>} />
       <Route path="/about" element={<Layout><About /></Layout>} />
       <Route path="/logement/:id" element={<Layout><Logement /></Layout>} />
-      <Route path="*" element={<Layout><NotFound /></Layout>} />
+      
+      {/* Nouvelle route explicite pour NotFound */}
+      <Route path="/404" element={<Layout><NotFound /></Layout>} />
+
+      {/* Cette route gère toutes les URLs inconnues et redirige vers /404 */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

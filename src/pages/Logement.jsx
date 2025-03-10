@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import vectorLeft from "../images/Vector-left.png";
 import vectorRight from "../images/Vector-right.png";
@@ -6,7 +6,7 @@ import { Collapse } from "../components/Components";
 
 function Logement() {
     const { id } = useParams();
-    const [location, setLocation] = useState(null);
+    const [location, setLocation] = useState(undefined);
     const [currentPicture, setCurrentPicture] = useState(0);  // index de l'image affichée actuellement
 
     useEffect(() => {
@@ -15,18 +15,22 @@ function Logement() {
                 const response = await fetch('/logements.json');
                 const data = await response.json();
                 const foundLocation = data.find((item) => item.id === id);
-                setLocation(foundLocation);
+                
+                if (!foundLocation) {
+                    setLocation(null);  // logement introuvable
+                } else {
+                    setLocation(foundLocation);  // logement trouvé
+                }
             } catch (error) {
                 console.error("Erreur de chargement : ", error);
+                setLocation(null);     // redirection en cas d'erreur
             }
         };
 
         fetchLocation();
     }, [id]);
 
-    if (!location) return <div>Chargement...</div>;
-    
-
+     
     const previousImage = () => {
         setCurrentPicture(prev => (prev === 0 ? location.pictures.length - 1 : prev - 1))
     }   // si PREV = la première image (index = 0) alors on revient à la dernière, sinon on fait index - 1
@@ -35,6 +39,17 @@ function Logement() {
         setCurrentPicture((currentPicture + 1) % location.pictures.length)
     }                                         // "&" ===> une fois à la dernière image, on retourne à la première 
 
+    // 1) État initial, données en cours de chargement
+    if (location === undefined) {
+        return <div>Chargement...</div>;
+    }
+
+    // 2) État où aucun logement correspondant n'est trouvé
+    if (location === null) {
+        return <Navigate to="/404" replace />;
+    }
+
+    // 3) État où le logement correspondant est trouvé
     return (
         <div className="location-page">
             <div className="location-image" key={currentPicture} style={{ backgroundImage: `url(${location.pictures[currentPicture]})` }}>            
