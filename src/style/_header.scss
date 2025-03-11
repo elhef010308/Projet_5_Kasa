@@ -1,12 +1,14 @@
 @use "mixins";
 
 header {
-    margin: 50px;
+    margin: 50px; 
     text-align: center;
+    width: 100%; // éviter les débordements
 }
 
 .header {
-    width: 1240px;
+    width: 90%; // largeur flexible
+    max-width: 1240px; // limite de largeur
     height: 68px;
     display: flex;
     flex-direction: row;
@@ -15,7 +17,7 @@ header {
 
     img {
         width: 210.32px;
-        height: 68px;
+        height: auto; // éviter une hauteur fixe
     }
 
     nav {
@@ -78,68 +80,27 @@ header {
     }
 }
 
-// Mobiles larges à tablettes petites (481px - 768px)
-@media (min-width: 481px) and (max-width: 768px) {
+
+
+// Mobiles larges à tablettes petites (481px - 769px)
+@media (min-width: 481px) and (max-width: 769px) {
     header {
-        margin: auto;
-    }
-
-    .header {
-        width: 700px;
-        height: 55px;
-        margin: 20px auto;
-
-        img {
-            width: 170px;
-            height: auto;
-        }
-
-        nav {
-            height: 24px;
-
-            ul {
-                gap: 20px;
-
-                li a {
-                    font-size: 16px;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-}
-
-// Tablettes standard à petits laptops (769px - 1024px)
-@media (min-width: 769px) and (max-width: 1024px) {
-    header {
-        margin: auto;
-    }
-
-    .header {
-        width: 900px;
-        height: 60px;
         margin: 30px auto;
+    }
 
-        img {
-            width: 190px;
-            height: auto;
-        }
-
-        nav {
-            height: 28px;
-
-            ul {
-                gap: 35px;
-
-                li a {
-                    font-size: 18px;
-                    font-weight: 500;
-                }
-            }
-        }
+    .header {
+        width: 663px;
     }
 }
 
 
-// Au-delà de 1024px : desktops standards
+// Tablettes standard à petits laptops (770px - 1025px)
+@media (min-width: 770px) and (max-width: 1025px) {
+    header {
+        margin: 40px auto;
+    }
+
+    .header {
+        width: 882px;
+    }
+}

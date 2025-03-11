@@ -51,7 +51,6 @@
     }
 }
 
-
 // COMPOSANT HOME (title)
 .home-title {
     background-image: url(../images/background-image.png);
@@ -74,7 +73,6 @@
     width: 1240px;
     height: 223px;
 }
-
 
 // COMPOSANT ABOUT
 .about-title {
@@ -135,9 +133,9 @@
 }
 
 
+
 // Petits mobiles (jusqu'à 480px)
 @media (max-width: 480px) {
-    // COMPOSANT CARTS
     .cart-component {
         width: 335px;
         flex-direction: column;
@@ -147,8 +145,8 @@
         margin: 0 auto;
 
         .cart-location {
-            width: 335px;
-            height: 325px;
+            width: 300px;
+            height: 300px;
 
             p {
                 margin: 15px;
@@ -156,12 +154,11 @@
         }
 
         .cart-location::before {
-            width: 335px;
-            height: 325px;
+            width: 300px;
+            height: 300px;
         }
     }
 
-    // COMPOSANTS HOME et ABOUT (title)
     .home-title,
     .about-title {
         width: 335px;
@@ -180,7 +177,7 @@
     }
 
     // COMPOSANT ABOUT
-    .collapse-container .collapse div {
+    /*.collapse-container .collapse div {
         width: 335px;
         height: 30px;
 
@@ -200,30 +197,30 @@
     .collapse-content.show {
         padding: 10px;
         font-size: 12px;
-    }
+    }*/
 }
 
-// Mobiles larges à tablettes petites (481px - 768px)
-@media (min-width: 481px) and (max-width: 768px) {
-    // COMPOSANT CARTS
+// Mobiles larges à tablettes petites (481px - 769px)
+@media (min-width: 481px) and (max-width: 769px) {
     .cart-component {
-        width: 90%;
+        width: 95%;
+        max-width: 720px;
         gap: 20px;
-        padding: 20px 0;
+        padding: 10px;
+        background-color: transparent;
         margin: 0 auto;
 
         .cart-location {
-            width: 100%;
-            height: 280px;
+            p {
+                margin: 15px;
+            }
         }
     }
 
-    // COMPOSANTS HOME et ABOUT (title)
     .home-title,
     .about-title {
-        width: 90%;
-        height: 150px;
-        margin: 0 auto;
+        max-width: 700px;
+        height: 125.89px;
 
         h1 {
             font-size: 26px;
@@ -232,64 +229,86 @@
 
     .home-title::before,
     .about-title::before {
-        width: 100%;
-        height: 150px;
+        max-width: 700px;
+        height: 125.89px;
     }
 
     // COMPOSANT ABOUT
-    .collapse-container .collapse div {
-        width: 90%;
-        height: 40px;
-    }
+    /*.collapse-container .collapse div {
+        width: 340px;
+        height: 30px;
 
-    .collapse-content.show {
-        font-size: 14px;
-    }
-}
+        .collapse-title {
+            font-size: 15px;
+        }
 
-// Tablettes standard à petits laptops (769px - 1024px)
-@media (min-width: 769px) and (max-width: 1024px) {
-    // COMPOSANT CARTS
-    .cart-component {
-        width: 80%;
-        gap: 30px;
-        padding: 30px 0;
-        margin: 0 auto;
+        .collapse-title {
+            width: 300px;
+        }
 
-        .cart-location {
-            width: 45%;
-            height: 300px;
+        .collapse-arrow {
+            width: 32px;
         }
     }
 
-    // COMPOSANTS HOME et ABOUT (title)
-    .home-title,
-    .about-title {
-        width: 80%;
-        height: 180px;
+    .collapse-content.show {
+        padding: 15px;
+        font-size: 14px;
+    }*/
+}
+
+// Tablettes standard à petits laptops (770px - 1025px)
+@media (min-width: 770px) and (max-width: 1025px) {
+     .cart-component {
+        width: 95%;
+        max-width: 959.40px;
+        gap: 50px;
+        padding: 50px 0;
         margin: 0 auto;
 
+        .cart-location {
+            p {
+                margin: 16px;
+            }
+        }
+    }
+
+    .home-title,
+    .about-title {
+        max-width: 933px;
+        height: 169.90px;
+
         h1 {
-            font-size: 28px;
+            font-size: 26px;
         }
     }
 
     .home-title::before,
     .about-title::before {
-        width: 100%;
-        height: 180px;
+        max-width: 933px;
+        height: 169.90px;
     }
 
     // COMPOSANT ABOUT
-    .collapse-container .collapse div {
-        width: 80%;
-        height: 50px;
+    /*.collapse-container .collapse div {
+        width: 340px;
+        height: 30px;
+
+        .collapse-title {
+            font-size: 18px;
+        }
+
+        .collapse-title {
+            width: auto;
+        }
+
+        .collapse-arrow {
+            width: 32px;
+        }
     }
 
     .collapse-content.show {
-        font-size: 16px;
-    }
+        padding: 20px;
+        font-size: 18px;
+    }*/
 }
-
-
-// Au-delà de 1024px : desktops standards
