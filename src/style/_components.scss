@@ -3,7 +3,8 @@
 // COMPOSANT CARTS
 .cart-component {
     @include mixins.display-flex;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,7 +12,7 @@
     padding: 50.5px 0;
     background-color: #f6f6f6;
     border-radius: 10px;
-    margin: 0 50px;
+    margin: 0 auto;
 
     .cart-location {
         display: flex;
@@ -176,7 +177,7 @@
     }
 
     // COMPOSANT ABOUT
-    /*.collapse-container .collapse div {
+    .collapse-container .collapse div {
         width: 335px;
         height: 30px;
 
@@ -189,14 +190,15 @@
         }
 
         .collapse-arrow {
-            width: 32px;
+           font-size: 18px;
+           text-align: right;
         }
     }
 
     .collapse-content.show {
         padding: 10px;
         font-size: 12px;
-    }*/
+    }
 }
 
 // Mobiles larges à tablettes petites (481px - 769px)

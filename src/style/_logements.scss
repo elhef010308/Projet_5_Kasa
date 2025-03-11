@@ -313,11 +313,9 @@
             gap: 20px;
     
             .collapse {
-                @include mixins.collapse;
                 width: 335px;
     
                 div {
-                    @include mixins.collapse-div;
                     height: 30px;
     
                     .collapse-title,
@@ -339,7 +337,7 @@
                 }
 
                 .collapse-content.show {
-                    padding: 40px 5px;
+                    padding: 50px 0;
                     font-size: 10px;
                 }
             }
@@ -349,10 +347,131 @@
 
 // Mobiles larges à tablettes petites (481px - 769px)
 @media (min-width: 481px) and (max-width: 769px) {
+    .location-page {    
+        .location-image {
+            width: 90%;
+            height: 310px;
+    
+            div {
+                padding: 0 15px;
+                height: 35px;
+    
+                .vector-left,
+                .vector-right {
+                    max-width: 35px;
+                    max-height: 35px;
+                }
+            }
+    
+            p {
+                font-size: 14px;
+            }
+        }
+    
+        .location-infos {
+            flex-direction: row;
+            width: 90%;
+            gap:0;
+    
+            .location-title {
+                flex-direction: column;
+                margin-top: 20px;
+                width: 70%;
+                gap: 15px;
+    
+                .title {    
+                    h2 {
+                        margin-bottom: 5px;
+                        font-size: 20px !important;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                    }
+                }
+    
+                .button-filter {
+                    gap: 10px;
+    
+                    button {
+                        min-width: 88px;
+                        width: auto;
+                        height: 23px;
+                        font-size: 12px;
+                    }
+                } 
+            }
+    
+            .location-filter {
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: 20px;
+                width: 30%;
+                gap: 15px;
+    
+                .author {
+                    height: 40px;
+                    gap: 10px;
+    
+                    p {
+                        font-size: 14px;
+                        margin-top: 5px;
+                    }
+    
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+    
+                .stars {
+                    width: 100px;
+    
+                    p {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    
+        .location-collapse {
+            margin-top: 15px;
+            width: 85%;
+    
+            .collapse {
+                width: 45%;
+    
+                div {
+                    height: 30px;
+    
+                    .collapse-title,
+                    .collapse-arrow {
+                        font-size: 13px;
+                    }
+    
+                    .collapse-title {
+                        width: 290px;
+                    }
+    
+                    .collapse-arrow {
+                        width: auto;
+                    }
+                }
 
+                .collapse-content {
+                    font-size: 12px;
+                }
+
+                .collapse-content.show {
+                    padding: 60px 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
 
 // Tablettes standard à petits laptops (770px - 1025px)
 @media (min-width: 770px) and (max-width: 1025px) {
-
+    
 }
