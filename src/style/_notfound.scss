@@ -47,8 +47,8 @@
     }
 }
 
-// Mobiles larges à tablettes petites (481px - 768px)
-@media (min-width: 481px) and (max-width: 768px) {
+// Mobiles larges à tablettes petites (481px - 769px)
+@media (min-width: 481px) and (max-width: 769px) {
     .error-page {
         img {
             width: 350px;
@@ -68,8 +68,8 @@
     }
 }
 
-// Tablettes standard à petits laptops (769px - 1024px)
-@media (min-width: 769px) and (max-width: 1024px) {
+// Tablettes standard à petits laptops (770px - 1025px)
+@media (min-width: 770px) and (max-width: 1025px) {
     .error-page {
         img {
             width: 400px;
@@ -87,6 +87,3 @@
         }
     }
 }
-
-
-// Au-delà de 1024px : desktops standards
