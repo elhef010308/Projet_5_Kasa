@@ -8,8 +8,9 @@
 
     .location-image {
         @include mixins.image-logement;
-        border-radius: 25px;
-        position: relative;
+        width: 100%;
+        max-width: 1240px;
+        height: 415px;
         animation: fadeIn 0.8s ease-in-out;
 
         @keyframes fadeIn {
@@ -36,8 +37,8 @@
 
             .vector-left,
             .vector-right {
-                width: 46.68px;
-                height: 79.20px;
+                width: 46.68px !important;
+                height: 79.20px !important;
                 color: white;
             }
         }
@@ -193,11 +194,13 @@
             /* Contenu caché par défaut */
             .collapse-content {
                 @include mixins.collapse-content;
+                font-size: 20px;
             }
 
             /* Quand le collapse est ouvert, le contenu prend de la place */
             .collapse-content.show {
                 @include mixins.collapse-content-show;
+                font-size: 20px;
                 padding: 80px 10px;
             }
         }
@@ -206,10 +209,150 @@
 
 
 // Petits mobiles (jusqu'à 480px)
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .location-page {    
+        .location-image {
+            width: 85%;
+            height: 255px;
+    
+            div {
+                padding: 0 10px;
+                height: 24px;
+    
+                .vector-left,
+                .vector-right {
+                    max-width: 24px;
+                    max-height: 24px;
+                }
+            }
+    
+            p {
+                display: none;
+            }
+        }
+    
+        .location-infos {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 413px;
+    
+            .location-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 85%;
+                margin-top: 15px;
+                gap: 15px;
+    
+                .title {    
+                    h2 {
+                        margin-bottom: 5px;
+                        font-size: 18px !important;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                    }
+                }
+    
+                .button-filter {
+                    gap: 5px;
+    
+                    button {
+                        min-width: 88px;
+                        width: auto;
+                        height: 18px;
+                        font-size: 10px;
+                    }
+                } 
+            }
+    
+            .location-filter {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 85%;
+                margin-top: 15px;
+                gap: 0;
+    
+                .author {
+                    height: 33px;
+                    gap: 10px;
+                    order: 2;
+                    margin:0;
+    
+                    p {
+                        font-size: 12px;
+                        margin-top: 3px;
+                    }
+    
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+    
+                .stars {
+                    width: 98px;
+                    order: 1;
+    
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    
+        .location-collapse {
+            align-items: center;
+            flex-direction: column;
+            margin-top: 15px;
+            gap: 20px;
+    
+            .collapse {
+                @include mixins.collapse;
+                width: 335px;
+    
+                div {
+                    @include mixins.collapse-div;
+                    height: 30px;
+    
+                    .collapse-title,
+                    .collapse-arrow {
+                        font-size: 13px;
+                    }
+    
+                    .collapse-title {
+                        width: 293px;
+                    }
+    
+                    .collapse-arrow {
+                        width: 30px;
+                    }
+                }
+
+                .collapse-content {
+                    font-size: 10px;
+                }
+
+                .collapse-content.show {
+                    padding: 40px 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
 
 // Mobiles larges à tablettes petites (481px - 769px)
-@media (min-width: 481px) and (max-width: 769px) {}
+@media (min-width: 481px) and (max-width: 769px) {
+
+}
 
 // Tablettes standard à petits laptops (770px - 1025px)
-@media (min-width: 770px) and (max-width: 1025px) {}
+@media (min-width: 770px) and (max-width: 1025px) {
+
+}
