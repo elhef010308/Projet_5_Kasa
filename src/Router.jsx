@@ -16,7 +16,7 @@ function Router() {
       <Route path="/404" element={<Layout><NotFound /></Layout>} />
 
       {/* Cette route gère toutes les URLs inconnues et redirige vers /404 */}
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>
   );
 }

@@ -64,8 +64,8 @@ function Logement() {
                     <div className="title">
                         <h2>{location.title}</h2>
                         <p>{location.location}</p>
-                    </div>                                     {/* MAP crée un bouton pour chaque tag du tableau location.tags */}
-                    <div className="button-filter">            {/* key={index} permet à React d'identifier chaque bouton de façon unique */}
+                    </div>                                       {/* MAP crée un bouton pour chaque tag du tableau location.tags */}
+                    <div className="button-filter">              {/* key={index} permet à React d'identifier chaque bouton de façon unique */}
                         {location.tags.map((tag, index) => (
                             <button key={index}>{tag}</button>
                         ))}                                      {/* {tag} = le contenu texte du bouton */}
