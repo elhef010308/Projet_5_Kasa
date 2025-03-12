@@ -123,12 +123,14 @@
         /* Contenu caché par défaut */
         .collapse-content {
             @include mixins.collapse-content;
+            font-size: 22px;
         }
 
         /* Quand le collapse est ouvert, le contenu prend de la place */
         .collapse-content.show {
             @include mixins.collapse-content-show;
-            padding: 15px;
+            padding: 30px 15px;
+            font-size: 22px;
         }
     }
 }
@@ -176,7 +178,6 @@
         height: 111px;
     }
 
-    // COMPOSANT ABOUT
     .collapse-container .collapse div {
         width: 335px;
         height: 30px;
@@ -190,9 +191,13 @@
         }
 
         .collapse-arrow {
-           font-size: 18px;
-           text-align: right;
+            font-size: 18px;
+            text-align: right;
         }
+    }
+
+    .collapse-content {
+        font-size: 12px;
     }
 
     .collapse-content.show {
@@ -235,16 +240,16 @@
     }
 
     // COMPOSANT ABOUT
-    /*.collapse-container .collapse div {
-        width: 340px;
-        height: 30px;
+    .collapse-container .collapse div {
+        width: 537px;
+        height: 38px;
 
         .collapse-title {
-            font-size: 15px;
+            font-size: 18px;
         }
 
         .collapse-title {
-            width: 300px;
+            width: 481px;
         }
 
         .collapse-arrow {
@@ -252,15 +257,19 @@
         }
     }
 
+    .collapse-content {
+        font-size: 16px;
+    }
+
     .collapse-content.show {
         padding: 15px;
-        font-size: 14px;
-    }*/
+        font-size: 16px;
+    }
 }
 
 // Tablettes standard à petits laptops (770px - 1025px)
 @media (min-width: 770px) and (max-width: 1025px) {
-     .cart-component {
+    .cart-component {
         width: 95%;
         max-width: 959.40px;
         gap: 50px;
@@ -290,17 +299,16 @@
         height: 169.90px;
     }
 
-    // COMPOSANT ABOUT
-    /*.collapse-container .collapse div {
-        width: 340px;
-        height: 30px;
+    .collapse-container .collapse div {
+        width: 716px;
+        height: 45px;
 
         .collapse-title {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .collapse-title {
-            width: auto;
+            width: 641px;
         }
 
         .collapse-arrow {
@@ -308,8 +316,13 @@
         }
     }
 
-    .collapse-content.show {
-        padding: 20px;
+    .collapse-content {
         font-size: 18px;
-    }*/
+    }
+
+    .collapse-content.show {
+        padding: 40px 20px;
+        font-size: 18px;
+    }
+
 }

@@ -89,7 +89,7 @@
 }
 
 @mixin collapse-content-show {
-  max-height: auto;
+  max-height: 100%;
   opacity: 1;
   background-color: transparent;
   margin: 10px;
