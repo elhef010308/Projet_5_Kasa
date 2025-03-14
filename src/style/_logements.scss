@@ -108,6 +108,11 @@
                     font-size: 14px;
                     font-weight: 700;
                     color: white;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+                }
+
+                button:hover {
+                    transform: scale(1.05);
                 }
             } 
         }
@@ -188,6 +193,11 @@
 
                 .collapse-arrow {
                     width: 32px;
+                }
+
+                .collapse-arrow:hover {
+                    transform: scale(1.10);
+                    cursor: pointer;
                 }
             }
 

@@ -30,7 +30,6 @@ function Logement() {
         fetchLocation();
     }, [id]);
 
-
     const previousImage = () => {
         setCurrentPicture(prev => (prev === 0 ? location.pictures.length - 1 : prev - 1))
     }   // si PREV = la première image (index = 0) alors on revient à la dernière, sinon on fait index - 1

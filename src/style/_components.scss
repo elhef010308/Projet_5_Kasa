@@ -25,6 +25,7 @@
         border-radius: 10px;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
         p {
             width: 300px;
@@ -37,6 +38,10 @@
             line-height: 143%;
             z-index: 2;
         }
+    }
+
+    .cart-location:hover {
+        transform: scale(1.05);
     }
 
     .cart-location::before {
@@ -117,6 +122,11 @@
 
             .collapse-arrow {
                 width: 32px;
+            }
+
+            .collapse-arrow:hover {
+                transform: scale(1.10);
+                cursor: pointer;
             }
         }
 
